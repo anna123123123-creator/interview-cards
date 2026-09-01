@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>面试题抽题练习卡 · Interview Flashcards</title>
+<meta name="description" content="免费开源、纯浏览器运行的面试题抽题练习工具，内置多分类真实面试题库，倒计时限时作答，翻卡查看回答思路。不联网、不需要AI接口。">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="topbar">
+    <h1>面试题<span class="accent">抽题</span>练习卡</h1>
+    <p class="tagline">选分类，随机抽一道真实面试题，限时作答练习，翻卡查看回答思路提示（STAR法则结构，不是完整答案）。</p>
+  </header>
+
+  <main class="layout">
+    <div class="controls">
+      <select id="categorySelect">
+        <option value="product">产品经理</option>
+        <option value="tech">技术研发</option>
+        <option value="marketing">市场营销</option>
+        <option value="behavior">通用行为面试</option>
+      </select>
+      <button id="btnNext" class="btn btn-primary">🎲 抽一题</button>
+      <div class="timer">
+        <span id="timerDisplay">01:30</span>
+        <button id="btnTimer" class="btn btn-ghost">开始计时</button>
+      </div>
+    </div>
+
+    <div class="card-wrap">
+      <div id="card" class="card">
+        <div class="card-face card-front">
+          <span class="card-tag" id="cardCat">产品经理</span>
+          <p id="questionText" class="question-text">点击"抽一题"开始</p>
+          <button id="btnFlip" class="btn btn-ghost flip-btn">翻卡看思路 ⟳</button>
+        </div>
+        <div class="card-face card-back">
+          <span class="card-tag">回答思路（STAR 结构）</span>
+          <p id="hintText" class="hint-text"></p>
+          <button id="btnFlipBack" class="btn btn-ghost flip-btn">翻回问题 ⟳</button>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <footer class="footer">
+    <p>MIT 协议开源，题库固定内置，不联网、不调用任何 AI 接口。</p>
+    <p>想要 AI 根据岗位生成定制问题、实时语音应答、AI 逐项评分反馈？<a href="https://inzyxuashop.com/aimianshi-yuanma.html" target="_blank" rel="noopener">看看完整版 AI 模拟面试源码 →</a></p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
